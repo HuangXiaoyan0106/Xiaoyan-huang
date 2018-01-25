@@ -5,8 +5,7 @@ xyApi=sbg.Api(url='https://cavatica-api.sbgenomics.com/v2',token=' ')
 
 
 # list my project
-xyProjects = xyApi.projects.query()
-for project in xyProjects.all():
+for project in xyApi.projects.query().all():
     print (project.id)
 
 # get the test project file information   ("all" can list all files, but "limit" just list 100 files)
