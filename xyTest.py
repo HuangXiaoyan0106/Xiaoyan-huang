@@ -19,7 +19,7 @@ file_list=[file.name for file in files]
 new_files=xyApi.files.query(project='yuankun/bgi-practise-source').all()
 
 # get target-source files
-target_file=[new_file for new_file in new_files if new_file.name in file_list]
+target_file=[x for x in new_files if x.name in file_list]
 
 # copy target files
 
